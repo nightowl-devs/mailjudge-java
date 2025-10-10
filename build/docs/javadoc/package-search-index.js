@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"dev.nightowl.mailjudge"},{"l":"dev.nightowl.mailjudge.rules"},{"l":"dev.nightowl.mailjudge.rules.impl"},{"l":"dev.nightowl.mailjudge.util"}];updateSearchResults();
