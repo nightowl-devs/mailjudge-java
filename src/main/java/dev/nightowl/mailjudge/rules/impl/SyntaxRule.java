@@ -3,7 +3,7 @@ package dev.nightowl.mailjudge.rules.impl;
 import dev.nightowl.mailjudge.rules.Rule;
 
 /**
- * Fast syntax validation without regex.
+ * Fast syntax validation.
  * Validates if email has the general syntax: local@domain
  */
 public class SyntaxRule implements Rule {

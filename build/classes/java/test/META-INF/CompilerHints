@@ -7,8 +7,6 @@ inline,dev/nightowl/mailjudge/EmailValidationBenchmark.mailJudgeStandardDetailed
 inline,dev/nightowl/mailjudge/EmailValidationBenchmark.mailJudgeStandardDetailedValid
 inline,dev/nightowl/mailjudge/EmailValidationBenchmark.mailJudgeStandardInvalid
 inline,dev/nightowl/mailjudge/EmailValidationBenchmark.mailJudgeStandardValid
-inline,dev/nightowl/mailjudge/EmailValidationBenchmark.mailJudgeStaticInvalid
-inline,dev/nightowl/mailjudge/EmailValidationBenchmark.mailJudgeStaticValid
 inline,dev/nightowl/mailjudge/EmailValidationBenchmark.regexInvalid
 inline,dev/nightowl/mailjudge/EmailValidationBenchmark.regexValid
 inline,dev/nightowl/mailjudge/EmailValidationBenchmark.setup

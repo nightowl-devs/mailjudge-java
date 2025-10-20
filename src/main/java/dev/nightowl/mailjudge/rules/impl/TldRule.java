@@ -3,7 +3,7 @@ package dev.nightowl.mailjudge.rules.impl;
 import dev.nightowl.mailjudge.rules.Rule;
 
 /**
- * Validates the top-level domain (TLD) without regex.
+ * Validates the top-level domain (TLD).
  * Ensures TLD is at least 2 characters and contains only letters.
  */
 public class TldRule implements Rule {

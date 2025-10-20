@@ -79,7 +79,7 @@ loadScripts(document, 'script');</script>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
 <div class="block">Main entry point for email validation.
  Fast, non-regex based email validation library.
- 
+ <p>
  Usage:
  <pre>
  // Quick validation with standard rules
@@ -116,24 +116,20 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Modifier and Type</div>
 <div class="table-header col-second">Method</div>
 <div class="table-header col-last">Description</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isValid(java.lang.String)" class="member-name-link">isValid</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validate(java.lang.String)" class="member-name-link">validate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Quick check if an email is valid.</div>
-</div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validate(java.lang.String)" class="member-name-link">validate</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Validates an email address using this instance's ruleset.</div>
 </div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#verify(java.lang.String)" class="member-name-link">verify</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Quick validation using standard ruleset.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#validateQ(java.lang.String)" class="member-name-link">validateQ</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">This method's intended usage is to validate an email much quicker than MainJudge#validate due to it instantly failing when any error occurs and not completing the full list of rules
+ Use this when you need performance over detailed errors.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withRuleset(dev.nightowl.mailjudge.rules.Ruleset)" class="member-name-link">withRuleset</a><wbr>(<a href="rules/Ruleset.html" title="class in dev.nightowl.mailjudge.rules">Ruleset</a>&nbsp;ruleset)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
+<div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>static <a href="MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#withRuleset(dev.nightowl.mailjudge.rules.Ruleset)" class="member-name-link">withRuleset</a><wbr>(<a href="rules/Ruleset.html" title="class in dev.nightowl.mailjudge.rules">Ruleset</a>&nbsp;ruleset)</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
 <div class="block">Creates a MailJudge instance with a custom ruleset.</div>
 </div>
 </div>
@@ -168,19 +164,6 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="verify(java.lang.String)">
-<h3>verify</h3>
-<div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></span>&nbsp;<span class="element-name">verify</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
-<div class="block">Quick validation using standard ruleset.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>email</code> - the email address to validate</dd>
-<dt>Returns:</dt>
-<dd>validation result</dd>
-</dl>
-</section>
-</li>
-<li>
 <section class="detail" id="withRuleset(dev.nightowl.mailjudge.rules.Ruleset)">
 <h3>withRuleset</h3>
 <div class="member-signature"><span class="modifiers">public static</span>&nbsp;<span class="return-type"><a href="MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></span>&nbsp;<span class="element-name">withRuleset</span><wbr><span class="parameters">(<a href="rules/Ruleset.html" title="class in dev.nightowl.mailjudge.rules">Ruleset</a>&nbsp;ruleset)</span></div>
@@ -207,15 +190,16 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
-<section class="detail" id="isValid(java.lang.String)">
-<h3>isValid</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isValid</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
-<div class="block">Quick check if an email is valid.</div>
+<section class="detail" id="validateQ(java.lang.String)">
+<h3>validateQ</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></span>&nbsp;<span class="element-name">validateQ</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;email)</span></div>
+<div class="block">This method's intended usage is to validate an email much quicker than MainJudge#validate due to it instantly failing when any error occurs and not completing the full list of rules
+ Use this when you need performance over detailed errors.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>email</code> - the email address to validate</dd>
 <dt>Returns:</dt>
-<dd>true if valid, false otherwise</dd>
+<dd>validation result with limited error information</dd>
 </dl>
 </section>
 </li>

@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Main entry point for email validation.
  * Fast, non-regex based email validation library.
- * 
+ * <p>
  * Usage:
  * <pre>
  * // Quick validation with standard rules
@@ -25,19 +25,9 @@ import java.util.List;
  */
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class MailJudge {
-    private static final MailJudge DEFAULT_INSTANCE = new MailJudge(Rulesets.standard());
 
     private final Ruleset ruleset;
 
-    /**
-     * Quick validation using standard ruleset.
-     * 
-     * @param email the email address to validate
-     * @return validation result
-     */
-    public static ValidationResult verify(String email) {
-        return DEFAULT_INSTANCE.validate(email);
-    }
 
     /**
      * Creates a MailJudge instance with a custom ruleset.
@@ -75,13 +65,32 @@ public class MailJudge {
         return ValidationResult.invalid(email, errors);
     }
 
+
     /**
-     * Quick check if an email is valid.
-     * 
+     *
+     * This method's intended usage is to validate an email much quicker than MainJudge#validate due to it instantly failing when any error occurs and not completing the full list of rules
+     * Use this when you need performance over detailed errors.
+     *
      * @param email the email address to validate
-     * @return true if valid, false otherwise
+     * @return validation result with limited error information
      */
-    public boolean isValid(String email) {
-        return validate(email).valid();
+
+    public ValidationResult validateQ(String email) {
+        if (email == null || email.isEmpty()) {
+            return ValidationResult.invalid(email, "Email cannot be null or empty");
+        }
+
+        for (Rule rule : ruleset.getRules()) {
+            if (!rule.validate(email)) {
+                return ValidationResult.invalid(email, rule.getErrorMessage());
+            }
+        }
+
+
+        return ValidationResult.valid(email);
+
+
     }
+
+
 }

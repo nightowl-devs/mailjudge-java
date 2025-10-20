@@ -67,10 +67,6 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="dev/nightowl/mailjudge/util/package-summary.html">dev.nightowl.mailjudge.util</a> - package dev.nightowl.mailjudge.util</dt>
 <dd>&nbsp;</dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#DISPOSABLE" class="member-name-link">DISPOSABLE</a> - Enum constant in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Checks against common disposable email providers.</div>
-</dd>
 <dt><a href="dev/nightowl/mailjudge/util/DisposableEmailProvider.html" class="type-name-link" title="class in dev.nightowl.mailjudge.util">DisposableEmailProvider</a> - Class in <a href="dev/nightowl/mailjudge/util/package-summary.html">dev.nightowl.mailjudge.util</a></dt>
 <dd>
 <div class="block">Fetches and caches disposable email domains from GitHub.</div>
@@ -88,10 +84,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/DisposableRule.html#%3Cinit%3E(java.util.Set)" class="member-name-link">DisposableRule(Set&lt;String&gt;)</a> - Constructor for class dev.nightowl.mailjudge.rules.impl.<a href="dev/nightowl/mailjudge/rules/impl/DisposableRule.html" title="class in dev.nightowl.mailjudge.rules.impl">DisposableRule</a></dt>
 <dd>
 <div class="block">Creates a new DisposableRule with custom disposable domains.</div>
-</dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#DOMAIN" class="member-name-link">DOMAIN</a> - Enum constant in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Validates the domain format and structure.</div>
 </dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/DomainRule.html" class="type-name-link" title="class in dev.nightowl.mailjudge.rules.impl">DomainRule</a> - Class in <a href="dev/nightowl/mailjudge/rules/impl/package-summary.html">dev.nightowl.mailjudge.rules.impl</a></dt>
 <dd>
@@ -157,17 +149,9 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates an invalid validation result with multiple errors.</div>
 </dd>
-<dt><a href="dev/nightowl/mailjudge/MailJudge.html#isValid(java.lang.String)" class="member-name-link">isValid(String)</a> - Method in class dev.nightowl.mailjudge.<a href="dev/nightowl/mailjudge/MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></dt>
-<dd>
-<div class="block">Quick check if an email is valid.</div>
-</dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>
 <dl class="index">
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#LENGTH" class="member-name-link">LENGTH</a> - Enum constant in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Validates email length constraints.</div>
-</dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/LengthRule.html" class="type-name-link" title="class in dev.nightowl.mailjudge.rules.impl">LengthRule</a> - Class in <a href="dev/nightowl/mailjudge/rules/impl/package-summary.html">dev.nightowl.mailjudge.rules.impl</a></dt>
 <dd>
 <div class="block">Validates email length according to RFC 5321.</div>
@@ -176,13 +160,10 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Creates a new LengthRule with RFC 5321 defaults.</div>
 </dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#LOCAL_PART" class="member-name-link">LOCAL_PART</a> - Enum constant in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Validates the local part (before @).</div>
-</dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/LocalPartRule.html" class="type-name-link" title="class in dev.nightowl.mailjudge.rules.impl">LocalPartRule</a> - Class in <a href="dev/nightowl/mailjudge/rules/impl/package-summary.html">dev.nightowl.mailjudge.rules.impl</a></dt>
 <dd>
-<div class="block">Validates the local part of an email (before @) without regex.</div>
+<div class="block">Validates the local part of an email (before @)
+ Fast character-by-character validation.</div>
 </dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/LocalPartRule.html#%3Cinit%3E()" class="member-name-link">LocalPartRule()</a> - Constructor for class dev.nightowl.mailjudge.rules.impl.<a href="dev/nightowl/mailjudge/rules/impl/LocalPartRule.html" title="class in dev.nightowl.mailjudge.rules.impl">LocalPartRule</a></dt>
 <dd>&nbsp;</dd>
@@ -195,10 +176,6 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="dev/nightowl/mailjudge/MailJudge.html#%3Cinit%3E()" class="member-name-link">MailJudge()</a> - Constructor for class dev.nightowl.mailjudge.<a href="dev/nightowl/mailjudge/MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#MX_RECORD" class="member-name-link">MX_RECORD</a> - Enum constant in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Validates that the domain has valid MX records.</div>
-</dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/MxRecordRule.html" class="type-name-link" title="class in dev.nightowl.mailjudge.rules.impl">MxRecordRule</a> - Class in <a href="dev/nightowl/mailjudge/rules/impl/package-summary.html">dev.nightowl.mailjudge.rules.impl</a></dt>
 <dd>
 <div class="block">Validates that the domain has valid MX records.</div>
@@ -233,10 +210,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Predefined rulesets for common validation scenarios.</div>
 </dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html" class="type-name-link" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a> - Enum Class in <a href="dev/nightowl/mailjudge/rules/package-summary.html">dev.nightowl.mailjudge.rules</a></dt>
-<dd>
-<div class="block">Predefined rule types for email validation.</div>
-</dd>
 </dl>
 <h2 class="title" id="I:S">S</h2>
 <dl class="index">
@@ -248,26 +221,18 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Strict validation including MX record lookup.</div>
 </dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#SYNTAX" class="member-name-link">SYNTAX</a> - Enum constant in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Validates basic email syntax (local@domain format).</div>
-</dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/SyntaxRule.html" class="type-name-link" title="class in dev.nightowl.mailjudge.rules.impl">SyntaxRule</a> - Class in <a href="dev/nightowl/mailjudge/rules/impl/package-summary.html">dev.nightowl.mailjudge.rules.impl</a></dt>
 <dd>
-<div class="block">Fast syntax validation without regex.</div>
+<div class="block">Fast syntax validation.</div>
 </dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/SyntaxRule.html#%3Cinit%3E()" class="member-name-link">SyntaxRule()</a> - Constructor for class dev.nightowl.mailjudge.rules.impl.<a href="dev/nightowl/mailjudge/rules/impl/SyntaxRule.html" title="class in dev.nightowl.mailjudge.rules.impl">SyntaxRule</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:T">T</h2>
 <dl class="index">
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#TLD" class="member-name-link">TLD</a> - Enum constant in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Validates the top-level domain (TLD).</div>
-</dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/TldRule.html" class="type-name-link" title="class in dev.nightowl.mailjudge.rules.impl">TldRule</a> - Class in <a href="dev/nightowl/mailjudge/rules/impl/package-summary.html">dev.nightowl.mailjudge.rules.impl</a></dt>
 <dd>
-<div class="block">Validates the top-level domain (TLD) without regex.</div>
+<div class="block">Validates the top-level domain (TLD).</div>
 </dd>
 <dt><a href="dev/nightowl/mailjudge/rules/impl/TldRule.html#%3Cinit%3E()" class="member-name-link">TldRule()</a> - Constructor for class dev.nightowl.mailjudge.rules.impl.<a href="dev/nightowl/mailjudge/rules/impl/TldRule.html" title="class in dev.nightowl.mailjudge.rules.impl">TldRule</a></dt>
 <dd>
@@ -318,6 +283,11 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Validates an email against all rules in this ruleset.</div>
 </dd>
+<dt><a href="dev/nightowl/mailjudge/MailJudge.html#validateQ(java.lang.String)" class="member-name-link">validateQ(String)</a> - Method in class dev.nightowl.mailjudge.<a href="dev/nightowl/mailjudge/MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></dt>
+<dd>
+<div class="block">This method's intended usage is to validate an email much quicker than MainJudge#validate due to it instantly failing when any error occurs and not completing the full list of rules
+ Use this when you need performance over detailed errors.</div>
+</dd>
 <dt><a href="dev/nightowl/mailjudge/ValidationResult.html" class="type-name-link" title="class in dev.nightowl.mailjudge">ValidationResult</a> - Record Class in <a href="dev/nightowl/mailjudge/package-summary.html">dev.nightowl.mailjudge</a></dt>
 <dd>
 <div class="block">Immutable result of an email validation operation.</div>
@@ -325,19 +295,6 @@ loadScripts(document, 'script');</script>
 <dt><a href="dev/nightowl/mailjudge/ValidationResult.html#%3Cinit%3E(boolean,java.lang.String,java.util.List)" class="member-name-link">ValidationResult(boolean, String, List&lt;String&gt;)</a> - Constructor for record class dev.nightowl.mailjudge.<a href="dev/nightowl/mailjudge/ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></dt>
 <dd>
 <div class="block">Creates an instance of a <code>ValidationResult</code> record class.</div>
-</dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#valueOf(java.lang.String)" class="member-name-link">valueOf(String)</a> - Static method in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Returns the enum constant of this class with the specified name.</div>
-</dd>
-<dt><a href="dev/nightowl/mailjudge/rules/RuleType.html#values()" class="member-name-link">values()</a> - Static method in enum class dev.nightowl.mailjudge.rules.<a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></dt>
-<dd>
-<div class="block">Returns an array containing the constants of this enum class, in
-the order they are declared.</div>
-</dd>
-<dt><a href="dev/nightowl/mailjudge/MailJudge.html#verify(java.lang.String)" class="member-name-link">verify(String)</a> - Static method in class dev.nightowl.mailjudge.<a href="dev/nightowl/mailjudge/MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></dt>
-<dd>
-<div class="block">Quick validation using standard ruleset.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:W">W</h2>

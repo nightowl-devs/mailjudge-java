@@ -54,7 +54,7 @@ loadScripts(document, 'script');</script>
 <h1 title="All Classes and Interfaces" class="title">All Classes and Interfaces</h1>
 </div>
 <div id="all-classes-table">
-<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="all-classes-table-tab0" role="tab" aria-selected="true" aria-controls="all-classes-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="all-classes-table-tab1" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab1', 2)" class="table-tab">Interfaces</button><button id="all-classes-table-tab2" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab2', 2)" class="table-tab">Classes</button><button id="all-classes-table-tab3" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab3', 2)" class="table-tab">Enum Classes</button><button id="all-classes-table-tab4" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab4', 2)" class="table-tab">Record Classes</button></div>
+<div class="table-tabs" role="tablist" aria-orientation="horizontal"><button id="all-classes-table-tab0" role="tab" aria-selected="true" aria-controls="all-classes-table.tabpanel" tabindex="0" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table', 2)" class="active-table-tab">All Classes and Interfaces</button><button id="all-classes-table-tab1" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab1', 2)" class="table-tab">Interfaces</button><button id="all-classes-table-tab2" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab2', 2)" class="table-tab">Classes</button><button id="all-classes-table-tab4" role="tab" aria-selected="false" aria-controls="all-classes-table.tabpanel" tabindex="-1" onkeydown="switchTab(event)" onclick="show('all-classes-table', 'all-classes-table-tab4', 2)" class="table-tab">Record Classes</button></div>
 <div id="all-classes-table.tabpanel" role="tabpanel" aria-labelledby="all-classes-table-tab0">
 <div class="summary-table two-column-summary">
 <div class="table-header col-first">Class</div>
@@ -77,7 +77,8 @@ loadScripts(document, 'script');</script>
 </div>
 <div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="dev/nightowl/mailjudge/rules/impl/LocalPartRule.html" title="class in dev.nightowl.mailjudge.rules.impl">LocalPartRule</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Validates the local part of an email (before @) without regex.</div>
+<div class="block">Validates the local part of an email (before @)
+ Fast character-by-character validation.</div>
 </div>
 <div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="dev/nightowl/mailjudge/MailJudge.html" title="class in dev.nightowl.mailjudge">MailJudge</a></div>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
@@ -99,20 +100,16 @@ loadScripts(document, 'script');</script>
 <div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
 <div class="block">Predefined rulesets for common validation scenarios.</div>
 </div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab3"><a href="dev/nightowl/mailjudge/rules/RuleType.html" title="enum class in dev.nightowl.mailjudge.rules">RuleType</a></div>
-<div class="col-last even-row-color all-classes-table all-classes-table-tab3">
-<div class="block">Predefined rule types for email validation.</div>
-</div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="dev/nightowl/mailjudge/rules/impl/SyntaxRule.html" title="class in dev.nightowl.mailjudge.rules.impl">SyntaxRule</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Fast syntax validation without regex.</div>
-</div>
-<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="dev/nightowl/mailjudge/rules/impl/TldRule.html" title="class in dev.nightowl.mailjudge.rules.impl">TldRule</a></div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab2"><a href="dev/nightowl/mailjudge/rules/impl/SyntaxRule.html" title="class in dev.nightowl.mailjudge.rules.impl">SyntaxRule</a></div>
 <div class="col-last even-row-color all-classes-table all-classes-table-tab2">
-<div class="block">Validates the top-level domain (TLD) without regex.</div>
+<div class="block">Fast syntax validation.</div>
 </div>
-<div class="col-first odd-row-color all-classes-table all-classes-table-tab4"><a href="dev/nightowl/mailjudge/ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></div>
-<div class="col-last odd-row-color all-classes-table all-classes-table-tab4">
+<div class="col-first odd-row-color all-classes-table all-classes-table-tab2"><a href="dev/nightowl/mailjudge/rules/impl/TldRule.html" title="class in dev.nightowl.mailjudge.rules.impl">TldRule</a></div>
+<div class="col-last odd-row-color all-classes-table all-classes-table-tab2">
+<div class="block">Validates the top-level domain (TLD).</div>
+</div>
+<div class="col-first even-row-color all-classes-table all-classes-table-tab4"><a href="dev/nightowl/mailjudge/ValidationResult.html" title="class in dev.nightowl.mailjudge">ValidationResult</a></div>
+<div class="col-last even-row-color all-classes-table all-classes-table-tab4">
 <div class="block">Immutable result of an email validation operation.</div>
 </div>
 </div>

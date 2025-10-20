@@ -1,0 +1,23 @@
+name: Deploy Library to CF Pages
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Deploy Java Artifacts to Cloudflare Pages
+        uses: nightowl-devs/cf-java-deploy@main
+        with:
+          cf-api-token: ${{ secrets.CF_API_TOKEN }}
+          cf-account-id: ${{ secrets.CF_ACCOUNT_ID }}
+          cf-project-name: repo-nightowldev

@@ -36,23 +36,23 @@ public class EmailValidationBenchmark {
     // ========== MailJudge Benchmarks ==========
 
     @Benchmark
-    public boolean mailJudgeStandardValid() {
-        return standardJudge.isValid(VALID_EMAIL);
+    public ValidationResult mailJudgeStandardValid() {
+        return standardJudge.validateQ(VALID_EMAIL);
     }
 
     @Benchmark
-    public boolean mailJudgeStandardInvalid() {
-        return standardJudge.isValid(INVALID_EMAIL);
+    public ValidationResult mailJudgeStandardInvalid() {
+        return standardJudge.validateQ(INVALID_EMAIL);
     }
 
     @Benchmark
     public ValidationResult mailJudgeStandardDetailedValid() {
-        return standardJudge.validate(VALID_EMAIL);
+        return standardJudge.validateQ(VALID_EMAIL);
     }
 
     @Benchmark
     public ValidationResult mailJudgeStandardDetailedInvalid() {
-        return standardJudge.validate(INVALID_EMAIL);
+        return standardJudge.validateQ(INVALID_EMAIL);
     }
 
     // ========== Regex Benchmarks (for comparison) ==========
@@ -67,15 +67,5 @@ public class EmailValidationBenchmark {
         return REGEX_PATTERN.matcher(INVALID_EMAIL).matches();
     }
 
-    // ========== Static Method Benchmark ==========
 
-    @Benchmark
-    public boolean mailJudgeStaticValid() {
-        return MailJudge.verify(VALID_EMAIL).valid();
-    }
-
-    @Benchmark
-    public boolean mailJudgeStaticInvalid() {
-        return MailJudge.verify(INVALID_EMAIL).valid();
-    }
 }

@@ -7,8 +7,6 @@ import java.util.Set;
 
 /**
  * Checks against disposable email providers.
- * Uses GitHub-sourced list with local caching for performance.
- * Fast hash-based lookup.
  */
 public class DisposableRule implements Rule {
     private final Set<String> disposableDomains;

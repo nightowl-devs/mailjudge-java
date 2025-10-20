@@ -15,9 +15,6 @@ public class MxRecordRule implements Rule {
 
     @Override
     public boolean validate(String email) {
-        if (email == null || email.isEmpty()) {
-            return false;
-        }
 
         int atIndex = email.indexOf('@');
         if (atIndex == -1) {

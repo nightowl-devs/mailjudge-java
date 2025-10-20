@@ -3,7 +3,7 @@ package dev.nightowl.mailjudge.rules.impl;
 import dev.nightowl.mailjudge.rules.Rule;
 
 /**
- * Validates the local part of an email (before @) without regex.
+ * Validates the local part of an email (before @)
  * Fast character-by-character validation.
  */
 public class LocalPartRule implements Rule {
@@ -21,7 +21,6 @@ public class LocalPartRule implements Rule {
 
         String localPart = email.substring(0, atIndex);
 
-        // Cannot start or end with dot
         if (localPart.charAt(0) == '.' || localPart.charAt(localPart.length() - 1) == '.') {
             return false;
         }
@@ -30,7 +29,6 @@ public class LocalPartRule implements Rule {
         for (int i = 0; i < localPart.length(); i++) {
             char c = localPart.charAt(i);
 
-            // Check for consecutive dots
             if (c == '.') {
                 if (previousWasDot) {
                     return false;
@@ -40,7 +38,6 @@ public class LocalPartRule implements Rule {
             }
             previousWasDot = false;
 
-            // Allowed characters: alphanumeric, dot, hyphen, underscore, plus
             if (!isValidLocalChar(c)) {
                 return false;
             }
