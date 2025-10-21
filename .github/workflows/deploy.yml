@@ -20,4 +20,4 @@ jobs:
         with:
           cf-api-token: ${{ secrets.CF_ACCOUNT_KEY }}
           cf-account-id: ${{ secrets.CF_ACCOUNT_ID }}
-          cf-project-name: repo-nightowldev
+          cf-project-name: repo-nightowl
