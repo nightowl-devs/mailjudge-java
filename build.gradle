@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'dev.nightowl'
-version = '1.0.2'
+version = '1.0.3'
 
 repositories {
     mavenCentral()
@@ -54,3 +54,20 @@ javadoc {
         options.addBooleanOption('html5', true)
     }
 }
+
+
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+            artifactId = 'simpay-sdk'
+        }
+    }
+    repositories {
+        maven {
+            url = uri("${buildDir}/repo")
+        }
+    }
+}
+
