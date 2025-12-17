@@ -11,7 +11,7 @@ MailJudge provides reliable email validation using character-by-character parsin
 - Predefined rulesets and support for custom rules
 - Lightweight with minimal dependencies
 - Extensible: add custom validation rules easily
-- Thoroughly unit tested
+
 
 ## Quick start
 
