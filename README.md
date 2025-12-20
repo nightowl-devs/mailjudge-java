@@ -1,4 +1,5 @@
-![mailjudge-java](https://socialify.git.ci/nightowl-devs/mailjudge-java/image?description=1&font=Inter&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Auto)
+![mailjudge-java](https://socialify.git.ci/nightowl-devs/mailjudge-java/image?description=1&font=Inter&issues=1&language=1&name=1&owner=1&pulls=1&stargazers=1&theme=Dark)
+# MailJudge
 Fastest email validation for Java — without regular expressions
 
 MailJudge provides reliable email validation using character-by-character parsing instead of regular expressions. This approach focuses on predictable performance, clear logic, and easy extensibility.
