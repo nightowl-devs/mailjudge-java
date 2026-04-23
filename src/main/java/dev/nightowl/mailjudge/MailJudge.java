@@ -12,16 +12,6 @@ import java.util.List;
 /**
  * Main entry point for email validation.
  * Fast, non-regex based email validation library.
- * <p>
- * Usage:
- * <pre>
- * // Quick validation with standard rules
- * ValidationResult result = MailJudge.verify("test@example.com");
- * 
- * // Custom ruleset
- * MailJudge judge = MailJudge.withRuleset(Rulesets.strict());
- * ValidationResult result = judge.verify("test@example.com");
- * </pre>
  */
 @RequiredArgsConstructor(access = AccessLevel.PRIVATE)
 public class MailJudge {
